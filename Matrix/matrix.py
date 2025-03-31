@@ -6,6 +6,7 @@ class Matrix(Tensor):
             raise ValueError("Wrong dimension")
         super().__init__(dim, data)
         self.rows, self.cols = dim
+
     def conv_rc2i(self, row_idx: int, col_idx: int):
         if not(0 <= row_idx < self.rows and 0 <= col_idx < self.cols):
             raise IndexError("Wrong index")
